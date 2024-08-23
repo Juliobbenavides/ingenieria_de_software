@@ -1,13 +1,5 @@
-'''
-Ejemplo 2.10
+# 2.10
 
-Una modista, para realizar sus prendas de vestir, encarga las telas al extranjero.
-Para cada pedido, tiene que proporcionar las medidas de la tela en pulgadas, 
-pero ella generalmente las tiene en metros. Realice un algoritmo para ayudar a resolver el problema, 
-determinando cuántas pulgadas debe pedir con base en los metros que requiere. 
-
-## Represéntelo mediante el diagrama de flujo y el pseudocódigo (1 pulgada = 0.0254 m).
-'''
 class Modista:
     def __init__(self, metros):
         self.metros  = metros
@@ -30,4 +22,29 @@ class Modista:
 test = Modista(45)
 print(test.determinarPulgadasNecesarias())
 print(test.pasarPulgadasA_metros(1771.6535433070867))
+
+# 2.11
+
+def calcularMetrosCubicosAlberca(ancho, largo, profundidad):
+    precioPorMetroCubico = 5600
+    
+    volumenAlberca = ancho * largo * profundidad
+    precioTotalPagar = volumenAlberca * precioPorMetroCubico
+    return precioTotalPagar
+
+print(calcularMetrosCubicosAlberca(4, 7, 2))
+
+# 3.1
+
+def cualEsMayor(valorA, valorB):
+    if valorA > valorB:
+        return valorA
+    elif valorB > valorA:
+        return valorB
+    else:
+        return "Los valores son iguales"
+    
+print(cualEsMayor(5, 6))
+print(cualEsMayor(7, 6))
+print(cualEsMayor(5, 5))
     
